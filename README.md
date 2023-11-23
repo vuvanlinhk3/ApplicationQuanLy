@@ -7,7 +7,10 @@ làm việc trên này nhé
 git clone https://github.com/vuvanlinhk3/ApplicationQuanLy.git
 
 để kết nối (để tải lên) :
-git push -u origin main https://github.com/vuvanlinhk3/ApplicationQuanLy.git
+
+git remote add origin https://github.com/vuvanlinhk3/ApplicationQuanLy.git
+
+git push -u origin main
 
 các lần tải lên sau : 
 git push origin main hoặc git push
