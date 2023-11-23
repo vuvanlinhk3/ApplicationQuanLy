@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Ly UWU/Ly UWU.iml" filepath="$PROJECT_DIR$/Ly UWU/Ly UWU.iml" />
       <module fileurl="file://$PROJECT_DIR$/QuanLyCongViec.iml" filepath="$PROJECT_DIR$/QuanLyCongViec.iml" />
     </modules>
   </component>
