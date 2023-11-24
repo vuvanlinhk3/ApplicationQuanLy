@@ -9,7 +9,6 @@ public class AnnouncementForm extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
-        setVisible(true);
 
         // Create JPanel for header (occupies 10%)
         JPanel headerAnnouncement = new JPanel();
@@ -86,6 +85,9 @@ public class AnnouncementForm extends JFrame {
         add(headerAnnouncement, BorderLayout.NORTH);
         add(secondPanel, BorderLayout.CENTER);
         add(mainPanel, BorderLayout.SOUTH);
+
+                setVisible(true);
+
     }
 
     public static void main(String[] args) {
