@@ -11,7 +11,7 @@ public class AnnouncementApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AnnouncementApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1600, 900);
+        Scene scene = new Scene(fxmlLoader.load(), 1300, 600);
         stage.setTitle("Thông Báo !");
         stage.setScene(scene);
         stage.show();
