@@ -8,6 +8,9 @@ module com.example.demo {
     opens RoomConfig to javafx.fxml;
     opens  WorkDetails to javafx.fxml;
     opens MyCard to javafx.fxml;
+    opens test to javafx.fxml;
+
+    exports test;
     exports WorkDetails;
     exports MyCard;
     exports Announcement;
