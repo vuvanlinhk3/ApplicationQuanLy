@@ -44,7 +44,7 @@
                         <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="300.0" text="Sao Chép Phòng" BorderPane.alignment="CENTER" />
                      </left>
                      <right>
-                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="300.0" text="Xem Thêm" BorderPane.alignment="CENTER" />
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="300.0" text="Cài Đặt Bảng" BorderPane.alignment="CENTER" />
                      </right>
                      <padding>
                         <Insets left="10.0" right="10.0" />

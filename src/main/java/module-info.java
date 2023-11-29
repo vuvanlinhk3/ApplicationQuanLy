@@ -10,7 +10,8 @@ module com.example.demo {
     opens MyCard to javafx.fxml;
     opens SetUpTable to javafx.fxml;
     opens SettingUser to javafx.fxml0;
-    exports SetUpTable;
+    opens  UserProfiles to javafx.fxml;
+    exports UserProfiles;
     exports SettingUser;
     exports MyCard;
     exports Announcement;
