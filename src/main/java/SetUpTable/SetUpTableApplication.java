@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SetUpTableAppliction extends Application {
+public class SetUpTableApplication extends Application {
 
     public static void main(String[] args) {
         launch(args);
@@ -16,7 +16,7 @@ public class SetUpTableAppliction extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(SetUpTableAppliction.class.getResource("SetUpTableForm.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(SetUpTableApplication.class.getResource("SetUpTableForm.fxml"));
         Parent root = fxmlLoader.load();
 
         Scene scene = new Scene(root , 1300,600);

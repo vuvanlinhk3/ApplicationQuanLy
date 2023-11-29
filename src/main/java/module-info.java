@@ -11,6 +11,7 @@ module com.example.demo {
     opens SetUpTable to javafx.fxml;
     opens SettingUser to javafx.fxml0;
     opens  UserProfiles to javafx.fxml;
+    exports SetUpTable;
     exports UserProfiles;
     exports SettingUser;
     exports MyCard;
