@@ -1,0 +1,12 @@
+/* Add this to your CSS file */
+
+/* Default style for unread labels */
+.unread-label {
+    /* Add your default style properties here */
+}
+
+/* Style for read labels */
+.read-label {
+    /* Add your read label style properties here */
+    -fx-background-color: lightgray; /* Change to the desired color */
+}
