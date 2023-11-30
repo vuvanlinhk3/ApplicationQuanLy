@@ -1,5 +1,6 @@
 package Announcement;
 
+import javafx.scene.Parent;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,7 +12,14 @@ public class AnnouncementApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AnnouncementApplication.class.getResource("AnnouncementForm.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1300, 600);
+        Parent root = fxmlLoader.load();
+        //code trong này
+
+
+
+        // --------------------------------------
+        Scene scene = new Scene(root, 1300, 600);
+        scene.getStylesheets().add(getClass().getResource("Announcementcss.css").toExternalForm());
         stage.setTitle("Thông Báo !");
         stage.setScene(scene);
         stage.show();
