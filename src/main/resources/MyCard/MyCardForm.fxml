@@ -1,13 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyCard.MyCardController">
-   <children>
-      <Button fx:id="clickme" layoutX="124.0" layoutY="175.0" mnemonicParsing="false" onAction="#clickbtn" text="Button" />
-      <Label fx:id="hienthi" layoutX="150.0" layoutY="56.0" text="Label" />
-   </children>
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <BorderPane prefHeight="56.0" prefWidth="200.0" style="-fx-background-color: #ddd;" BorderPane.alignment="CENTER">
+         <top>
+            <BorderPane prefHeight="56.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <center>
+                  <Pane prefHeight="56.0" prefWidth="350.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER_LEFT">
+                     <children>
+                        <Label layoutX="2.0" layoutY="20.0" prefHeight="17.0" prefWidth="252.0" text="Các Thẻ Của Tôi (Nhiệm Vụ Chưa Hoàn hành)" />
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Pane>
+               </center>
+               <left>
+                  <Pane prefHeight="56.0" prefWidth="53.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button layoutX="14.0" layoutY="16.0" mnemonicParsing="false" text="×" />
+                     </children>
+                  </Pane>
+               </left>
+               <right>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button layoutX="134.0" layoutY="16.0" mnemonicParsing="false" text="⋮" />
+                     </children>
+                  </Pane>
+               </right>
+            </BorderPane>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="600.0" style="-fx-border-color: gray;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" text="Hiện Tại">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Ưu Tiên ">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Gần Hết Thời Gian">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </top>
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="403.0" prefWidth="730.0" style="-fx-background-color: gray;" />
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

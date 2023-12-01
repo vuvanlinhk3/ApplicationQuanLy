@@ -31,6 +31,7 @@ public class AnnouncementController {
 
     @FXML
     private void xexit() {
+<<<<<<< HEAD
         Label itemNotification_Label = new Label("HoangAnhPeas has just changed the location of 1 file");
         itemNotification_Label.setPadding(new Insets(20));
         VBox.setMargin(itemNotification_Label, new Insets(5, 0, 5, 0));
@@ -43,6 +44,14 @@ public class AnnouncementController {
         );
         Background background = new Background(backgrounddefault);
 
+=======
+        Label itemNotification_Label = new Label("HoangAnhPeas has just changed the location of 1 file"); // tạo label trong code
+        itemNotification_Label.setPadding(new Insets(20)); // tạo khoảng cách của chữ với lề
+        VBox.setMargin(itemNotification_Label, new Insets(5, 0, 5, 0)); // tạo khảng cách giữa các label
+        BackgroundFill backgroundFill = new BackgroundFill(Color.DARKGRAY, CornerRadii.EMPTY, Insets.EMPTY); //sét màu nền
+        // Tạo Background từ BackgroundFill
+        Background background = new Background(backgroundFill); // tạo background
+>>>>>>> bc8d7d75925cab28149cdd6b22776c7eb16dbc7e
         itemNotification_Label.setBackground(background);
 
         itemNotification_Label.setMaxWidth(Double.MAX_VALUE);
