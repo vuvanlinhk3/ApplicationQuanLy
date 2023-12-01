@@ -24,7 +24,7 @@ public class AnnouncementController {
     private VBox yourVBoxId;
     private List<Label> labelList = new ArrayList<>();
 
-    // Variable to track whether an announcement has been read or not
+    // tạo biến xác định đọc hay chưa , mặc định chưa đọc
     private boolean isRead = false;
 
     @FXML
@@ -34,7 +34,14 @@ public class AnnouncementController {
         VBox.setMargin(itemNotification_Label, new Insets(5, 0, 5, 0));
 
         // Set default background color based on read status
-        setBackground(itemNotification_Label);
+        BackgroundFill backgrounddefault= new BackgroundFill(
+                 Color.DARKGRAY,
+                CornerRadii.EMPTY,
+                Insets.EMPTY
+        );
+        Background background = new Background(backgrounddefault);
+
+        itemNotification_Label.setBackground(background);
 
         itemNotification_Label.setMaxWidth(Double.MAX_VALUE);
 
@@ -47,12 +54,25 @@ public class AnnouncementController {
     }
 
     // Handle click on an announcement label
-    private void handleClick(Label label) {
-        isRead = !isRead; // Toggle read status
-        setBackground(label);
+    private List<Label> clickedLabels = new ArrayList<>();
+
+    private void handleClick(Label clickedLabel) {
+        // Iterate through all labels
+            isRead = true;
+            if(isRead){
+                setBackground(clickedLabel);
+                clickedLabels.add(clickedLabel);
+            }
+            for(Label label : clickedLabels){
+                System.out.println(clickedLabel);
+
+            }
+
     }
 
+
     // Set background color based on read status
+    // Assuming isRead is a property in your Label class
     private void setBackground(Label label) {
         BackgroundFill backgroundFill = new BackgroundFill(
                 isRead ? Color.LIGHTGRAY : Color.DARKGRAY,
@@ -63,7 +83,8 @@ public class AnnouncementController {
         label.setBackground(background);
     }
 
-    // Handle click on "Mark as Unseen" button
+
+
     @FXML
     private void clicknotifidontseen() {
         ObservableList<Node> children = yourVBoxId.getChildren();
@@ -71,6 +92,7 @@ public class AnnouncementController {
         // Remove seen labels
         children.removeIf(node -> {
             if (node instanceof Label) {
+                Label label = (Label) node;
                 return isRead;
             }
             return false;
@@ -92,6 +114,7 @@ public class AnnouncementController {
             setBackground(label);
         }
     }
+
 
     @FXML
     private ScrollPane scrollnotification;

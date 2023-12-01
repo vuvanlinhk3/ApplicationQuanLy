@@ -13,7 +13,7 @@ module com.example.demo {
     opens  UserProfiles to javafx.fxml;
     opens Login to javafx.fxml;
     opens Signup to javafx.fxml;
-    exports SetUpTable;
+    opens img to javafx.fxml;
     exports UserProfiles;
     exports SettingUser;
     exports MyCard;
