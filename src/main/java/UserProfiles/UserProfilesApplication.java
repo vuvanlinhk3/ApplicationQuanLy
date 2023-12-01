@@ -20,6 +20,7 @@ public class UserProfilesApplication extends Application {
         Parent root = fxmlLoader.load();
 
         Scene scene = new Scene(root,1300,600);
+        //scene.getStylesheets().add(getClass().getResource("UserProfilescss.css").toExternalForm());
         primaryStage.setTitle("Hồ Sơ");
         primaryStage.setScene(scene);
         primaryStage.show();

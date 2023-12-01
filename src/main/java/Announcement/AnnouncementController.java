@@ -15,6 +15,8 @@ import javafx.collections.FXCollections;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.scene.Node;
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class AnnouncementController {
@@ -25,7 +27,7 @@ public class AnnouncementController {
     private List<Label> labelList = new ArrayList<>();
 
     // tạo biến xác định đọc hay chưa , mặc định chưa đọc
-    private boolean isRead = false;
+
 
     @FXML
     private void xexit() {
@@ -35,7 +37,7 @@ public class AnnouncementController {
 
         // Set default background color based on read status
         BackgroundFill backgrounddefault= new BackgroundFill(
-                 Color.DARKGRAY,
+                 Color.rgb(0,0,0,0.5),
                 CornerRadii.EMPTY,
                 Insets.EMPTY
         );
@@ -52,30 +54,32 @@ public class AnnouncementController {
         yourVBoxId.getChildren().add(itemNotification_Label);
         labelList.add(itemNotification_Label);
     }
-
+    private boolean isRead = false;
+    private void setReadStatus(Label label, boolean isRead) {
+        // Đặt trạng thái của label
+        label.getProperties().put("isRead", isRead);
+    }
     // Handle click on an announcement label
-    private List<Label> clickedLabels = new ArrayList<>();
+    private Set<Label> clickedLabels = new HashSet<>();
 
     private void handleClick(Label clickedLabel) {
-        // Iterate through all labels
-            isRead = true;
-            if(isRead){
+        // Nếu clickedLabel chưa tồn tại trong danh sách clickedLabels, thì mới thêm vào
+        if (!clickedLabels.contains(clickedLabel)) {
+            isRead = !isRead;
+            if (isRead) {
                 setBackground(clickedLabel);
                 clickedLabels.add(clickedLabel);
+                setReadStatus(clickedLabel, true);
             }
-            for(Label label : clickedLabels){
-                System.out.println(clickedLabel);
-
-            }
-
+        }
+        for (Label label : clickedLabels) {
+            System.out.println(label);
+        }
     }
 
-
-    // Set background color based on read status
-    // Assuming isRead is a property in your Label class
     private void setBackground(Label label) {
         BackgroundFill backgroundFill = new BackgroundFill(
-                isRead ? Color.LIGHTGRAY : Color.DARKGRAY,
+                isRead ? Color.rgb(0,0,0,0.3) : Color.rgb(0,0,0,0.5),
                 CornerRadii.EMPTY,
                 Insets.EMPTY
         );
@@ -83,26 +87,37 @@ public class AnnouncementController {
         label.setBackground(background);
     }
 
+    private void showAllLabels() {
+        ObservableList<Node> children = yourVBoxId.getChildren();
+        children.clear();
 
+        // Add all labels to the VBox
+        for (Label label : labelList) {
+            setBackground(label);
+            children.add(label);
+        }
+    }
 
     @FXML
+    private Button notifidontseen;
+
+    private boolean allandnot = false;
+    @FXML
     private void clicknotifidontseen() {
-        ObservableList<Node> children = yourVBoxId.getChildren();
+        allandnot = !allandnot;
+        try {
+            if (allandnot) {
+                ObservableList<Node> children = yourVBoxId.getChildren();
+                notifidontseen.setText("Tất cả");
+                // Remove seen labels
+                children.removeIf(node -> node instanceof Label && clickedLabels.contains(node));
+            } else {
+                notifidontseen.setText("Thông Báo Chưa Đọc");
+                showAllLabels();
 
-        // Remove seen labels
-        children.removeIf(node -> {
-            if (node instanceof Label) {
-                Label label = (Label) node;
-                return isRead;
             }
-            return false;
-        });
-
-        // Add unseen labels to the beginning
-        for (Label label : labelList) {
-            if (!isRead) {
-                children.add(0, label);
-            }
+        } catch (Exception ex) {
+            System.out.println(ex);
         }
     }
 
@@ -112,6 +127,7 @@ public class AnnouncementController {
         isRead = true; // Mark all as seen
         for (Label label : labelList) {
             setBackground(label);
+            clickedLabels.add(label);
         }
     }
 

@@ -1,12 +1,13 @@
-/* Add this to your CSS file */
-
-/* Default style for unread labels */
-.unread-label {
-    /* Add your default style properties here */
+.background{
+    -fx-background-image: url("backg.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
 }
+.header{
+    -fx-background-color: rgba(0,0,0,0.5);
 
-/* Style for read labels */
-.read-label {
-    /* Add your read label style properties here */
-    -fx-background-color: lightgray; /* Change to the desired color */
+}
+.item1{
+    -fx-background-color: rgba(0,0,0,0.3);
+
 }

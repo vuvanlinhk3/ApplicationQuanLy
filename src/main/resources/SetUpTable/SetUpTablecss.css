@@ -1,0 +1,23 @@
+.background{
+    -fx-background-image: url("background.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+.header{
+    -fx-background-color: rgba(0,0,0,0.5);
+}
+.item{
+    -fx-background-color: rgba(0,0,0,0.1);
+
+}
+.itemcolor{
+    -fx-background-color: rgba(0,0,0,0.3);
+    -fx-border-color: #8383e8;
+    -fx-background-radius: 5 ;
+    -fx-border-radius: 5;
+}
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-width: 0;
+}
