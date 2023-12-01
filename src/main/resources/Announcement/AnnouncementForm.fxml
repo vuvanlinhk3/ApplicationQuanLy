@@ -10,59 +10,82 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Announcement.AnnouncementController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="815.0" styleClass="background" stylesheets="@Announcementcss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Announcement.AnnouncementController">
     <top>
-        <BorderPane prefHeight="105.0" prefWidth="727.0" style="-fx-background-color: #ddd;" BorderPane.alignment="CENTER">
-            <left>
-                <Pane prefHeight="56.0" prefWidth="84.0" BorderPane.alignment="CENTER">
-                    <Button fx:id="cancelx" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#xexit" text="X" />
-                </Pane>
-            </left>
-            <right>
-                <Pane prefHeight="56.0" prefWidth="428.0" BorderPane.alignment="CENTER">
-                    <children>
-                        <Button layoutX="282.0" layoutY="13.0" mnemonicParsing="false" text="V" />
-                        <Button layoutX="352.0" layoutY="13.0" mnemonicParsing="false" text=":" />
-                    </children>
-                </Pane>
-            </right>
-            <center>
-                <Pane prefHeight="56.0" prefWidth="145.0" BorderPane.alignment="CENTER">
-                    <children>
-                        <Label fx:id="thongbao" layoutY="16.0" text="Thông Báo">
-                     <font>
-                        <Font size="16.0" />
-                     </font></Label>
-                    </children>
-                </Pane>
-            </center>
+        <BorderPane prefHeight="105.0" prefWidth="727.0" BorderPane.alignment="CENTER">
          <bottom>
-            <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="49.0" prefWidth="727.0" style="-fx-background-color: rgb(255,234,234); -fx-border-color: #333;" BorderPane.alignment="CENTER">
+            <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="55.0" prefWidth="815.0" styleClass="item1" BorderPane.alignment="CENTER">
                <children>
                       <Pane prefHeight="50.0" prefWidth="200.0">
                           <children>
-                              <MenuButton alignment="CENTER" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="162.0" text="Xắp Xếp Theo">
+                              <MenuButton alignment="CENTER" layoutX="19.0" layoutY="8.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="162.0" styleClass="item1" text="Xắp Xếp Theo" textFill="WHITE">
                                   <items>
                                       <MenuItem mnemonicParsing="false" text="Action 1" />
                                       <MenuItem mnemonicParsing="false" text="Action 2" />
                                   </items>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
                               </MenuButton>
                           </children>
                       </Pane>
                       <Pane layoutX="200.0" prefHeight="50.0" prefWidth="200.0">
                           <children>
-                              <Button fx:id="notifidontseen" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#clicknotifidontseen" prefHeight="30.0" prefWidth="170.0" text="Thông Báo Chưa Đọc" />
+                              <Button fx:id="notifidontseen" layoutX="15.0" layoutY="8.0" mnemonicParsing="false" onAction="#clicknotifidontseen" prefHeight="35.0" prefWidth="202.0" styleClass="item1" text="Thông Báo Chưa Đọc" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Button>
                           </children>
                       </Pane>
                </children>
             </Pane>
          </bottom>
+         <top>
+            <BorderPane prefHeight="56.0" prefWidth="200.0" styleClass="header" BorderPane.alignment="CENTER">
+               <left>
+                      <Pane prefHeight="56.0" prefWidth="84.0" BorderPane.alignment="CENTER">
+                          <Button fx:id="cancelx" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#xexit" prefHeight="40.0" prefWidth="40.0" styleClass="item1" text="X" textFill="WHITE">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                     </Button>
+                      </Pane>
+               </left>
+               <center>
+                      <Pane prefHeight="56.0" prefWidth="145.0" BorderPane.alignment="CENTER">
+                          <children>
+                              <Label fx:id="thongbao" layoutY="16.0" text="Thông Báo" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                          </children>
+                      </Pane>
+               </center>
+               <right>
+                      <Pane prefHeight="56.0" prefWidth="428.0" BorderPane.alignment="CENTER">
+                          <children>
+                              <Button layoutX="280.0" layoutY="8.0" mnemonicParsing="false" onAction="#clickallseeened" prefHeight="40.0" prefWidth="40.0" styleClass="item1" text="V" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                              <Button layoutX="351.0" layoutY="8.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="item1" text=":" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                          </children>
+                      </Pane>
+               </right>
+            </BorderPane>
+         </top>
         </BorderPane>
     </top>
    <center>
-      <ScrollPane BorderPane.alignment="CENTER">
+      <ScrollPane fx:id="scrollnotification" styleClass="scrollpane" stylesheets="@Announcementcss.css" BorderPane.alignment="CENTER">
          <content>
-            <VBox fx:id="yourVBoxId" prefHeight="200.0" prefWidth="1930.0" />
+            <VBox fx:id="yourVBoxId" prefHeight="200.0" prefWidth="200.0" />
          </content>
       </ScrollPane>
    </center>

@@ -1,0 +1,16 @@
+.background{
+    -fx-background-image: url("backg.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+.headerconfig{
+    -fx-background-color: rgba(0, 0, 0 , 0.5) ;
+}
+.downheader{
+    -fx-background-color: rgba(0, 0, 0 , 0.2) ;
+
+}
+.member{
+    -fx-background-color: rgba(0, 0, 0 , 0.3) ;
+
+}

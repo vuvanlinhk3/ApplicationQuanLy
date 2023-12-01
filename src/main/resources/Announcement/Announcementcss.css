@@ -1,0 +1,13 @@
+.background{
+    -fx-background-image: url("backg.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+.header{
+    -fx-background-color: rgba(0,0,0,0.5);
+
+}
+.item1{
+    -fx-background-color: rgba(0,0,0,0.3);
+
+}

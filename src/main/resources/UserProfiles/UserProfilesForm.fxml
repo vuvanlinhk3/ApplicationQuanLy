@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="986.0" style="-fx-background-color: #ddd;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserProfiles.UserProfilesController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="1166.0" styleClass="layoutmain" stylesheets="@UserProfilescss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserProfiles.UserProfilesController">
    <left>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </left>
@@ -23,15 +23,15 @@
    <center>
       <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" maxWidth="-Infinity" prefHeight="715.0" prefWidth="1000.0" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
          <content>
-            <VBox fx:id="vBoxAll" prefHeight="1295.0" prefWidth="584.0">
+            <VBox fx:id="vBoxAll" prefHeight="1294.0" prefWidth="763.0">
                <children>
                   <VBox prefHeight="300.0" prefWidth="600.0" style="-fx-border-color: #DDDDDD;">
                      <children>
                         <Pane prefHeight="50.0" prefWidth="582.0">
                            <children>
-                              <Label layoutX="14.0" layoutY="16.0" text="Profile photo and header image">
+                              <Label layoutX="14.0" layoutY="11.0" text="Profile photo and header image">
                                  <font>
-                                    <Font name="Calibri" size="16.0" />
+                                    <Font name="Calibri" size="22.0" />
                                  </font>
                               </Label>
                            </children>
@@ -40,14 +40,17 @@
                            <children>
                               <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFF99;">
                                  <children>
-                                    <Button layoutX="14.0" layoutY="60.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 50%; -fx-background-color: #FFCC99;" />
+                                    <Button layoutX="14.0" layoutY="59.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" style="-fx-background-radius: 50%; -fx-background-color: #FFCC99;" />
                                  </children>
                               </Pane>
                               <BorderPane prefHeight="200.0" prefWidth="200.0">
                                  <right>
                                     <Pane prefHeight="125.0" prefWidth="250.0" BorderPane.alignment="CENTER">
                                        <children>
-                                          <Label layoutX="14.0" layoutY="29.0" text="Who can see your profile photo?" />
+                                          <Label layoutX="14.0" layoutY="29.0" text="Who can see your profile photo?">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font></Label>
                                           <Label layoutX="14.0" layoutY="63.0" text="Every one" textFill="#979797">
                                              <font>
                                                 <Font size="14.0" />
@@ -68,9 +71,9 @@
                      <children>
                         <Pane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Label layoutX="14.0" layoutY="13.0" text="About you">
+                              <Label layoutX="14.0" layoutY="9.0" text="About you">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="22.0" />
                                  </font>
                               </Label>
                            </children>
@@ -83,15 +86,24 @@
                            <left>
                               <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <TextField layoutX="37.0" layoutY="63.0" style="-fx-background-color: #fff;" text="Vũ Văn Linh" />
-                                    <Label layoutX="26.0" layoutY="21.0" text="Full Name" textFill="#616161" />
+                                    <TextField layoutX="37.0" layoutY="63.0" style="-fx-background-color: #fff;" text="Vũ Văn Linh">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <Label layoutX="26.0" layoutY="21.0" text="Full Name" textFill="#616161">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
                                  </children>
                               </Pane>
                            </left>
                            <right>
                               <Pane prefHeight="149.0" prefWidth="250.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Label layoutX="14.0" layoutY="14.0" text="Who can see this?" textFill="#686868" />
+                                    <Label layoutX="14.0" layoutY="14.0" text="Who can see this?" textFill="#686868">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
                                     <Label layoutX="14.0" layoutY="65.0" text="Every one" textFill="#8d8d8d">
                                        <font>
                                           <Font size="14.0" />
@@ -104,15 +116,24 @@
                            <left>
                               <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <TextField layoutX="37.0" layoutY="63.0" style="-fx-background-color: #fff;" text="Vũ Văn Linh" />
-                                    <Label layoutX="26.0" layoutY="21.0" text="Public Name" textFill="#616161" />
+                                    <TextField layoutX="37.0" layoutY="63.0" style="-fx-background-color: #fff;" text="Vũ Văn Linh">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <Label layoutX="26.0" layoutY="21.0" text="Public Name" textFill="#616161">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
                                  </children>
                               </Pane>
                            </left>
                            <right>
                               <Pane prefHeight="200.0" prefWidth="250.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Label layoutX="14.0" layoutY="14.0" text="Who can see this?" textFill="#686868" />
+                                    <Label layoutX="14.0" layoutY="14.0" text="Who can see this?" textFill="#686868">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
                                     <Label layoutX="14.0" layoutY="65.0" text="Every one" textFill="#8d8d8d">
                                        <font>
                                           <Font size="14.0" />
@@ -126,15 +147,24 @@
                            <left>
                               <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <TextField layoutX="37.0" layoutY="63.0" style="-fx-background-color: #Fff;" />
-                                    <Label layoutX="26.0" layoutY="21.0" text="Job title" textFill="#616161" />
+                                    <TextField layoutX="37.0" layoutY="63.0" style="-fx-background-color: #Fff;">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <Label layoutX="26.0" layoutY="21.0" text="Job title" textFill="#616161">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
                                  </children>
                               </Pane>
                            </left>
                            <right>
                               <Pane prefHeight="200.0" prefWidth="250.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Label layoutX="14.0" layoutY="14.0" text="Who can see this?" textFill="#686868" />
+                                    <Label layoutX="14.0" layoutY="14.0" text="Who can see this?" textFill="#686868">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
                                     <Label layoutX="14.0" layoutY="65.0" text="Every one" textFill="#8d8d8d">
                                        <font>
                                           <Font size="14.0" />
@@ -148,15 +178,24 @@
                            <left>
                               <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <TextField layoutX="37.0" layoutY="63.0" style="-fx-background-color: #fff;" />
-                                    <Label layoutX="26.0" layoutY="21.0" text="Department" textFill="#616161" />
+                                    <TextField layoutX="37.0" layoutY="63.0" style="-fx-background-color: #fff;">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <Label layoutX="26.0" layoutY="21.0" text="Department" textFill="#616161">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
                                  </children>
                               </Pane>
                            </left>
                            <right>
                               <Pane prefHeight="200.0" prefWidth="250.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Label layoutX="14.0" layoutY="14.0" text="Who can see this?" textFill="#686868" />
+                                    <Label layoutX="14.0" layoutY="14.0" text="Who can see this?" textFill="#686868">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
                                     <Label layoutX="14.0" layoutY="65.0" text="Every one" textFill="#8d8d8d">
                                        <font>
                                           <Font size="14.0" />
@@ -170,15 +209,24 @@
                            <left>
                               <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <TextField layoutX="37.0" layoutY="63.0" style="-fx-background-color: #FFF;" />
-                                    <Label layoutX="26.0" layoutY="21.0" text="Organization" textFill="#616161" />
+                                    <TextField layoutX="37.0" layoutY="63.0" style="-fx-background-color: #FFF;">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <Label layoutX="26.0" layoutY="21.0" text="Organization" textFill="#616161">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
                                  </children>
                               </Pane>
                            </left>
                            <right>
                               <Pane prefHeight="200.0" prefWidth="250.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Label layoutX="14.0" layoutY="14.0" text="Who can see this?" textFill="#686868" />
+                                    <Label layoutX="14.0" layoutY="14.0" text="Who can see this?" textFill="#686868">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
                                     <Label layoutX="14.0" layoutY="65.0" text="Every one" textFill="#8d8d8d">
                                        <font>
                                           <Font size="14.0" />
@@ -194,9 +242,9 @@
                      <children>
                         <Pane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Label layoutX="14.0" layoutY="13.0" text="Contract">
+                              <Label layoutX="14.0" layoutY="9.0" text="Contract">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="22.0" />
                                  </font>
                               </Label>
                            </children>
@@ -209,15 +257,24 @@
                            <left>
                               <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <TextField layoutX="37.0" layoutY="63.0" style="-fx-background-color: #fff;" text="0365556145" />
-                                    <Label layoutX="26.0" layoutY="21.0" text="Organization" textFill="#616161" />
+                                    <TextField layoutX="37.0" layoutY="63.0" style="-fx-background-color: #fff;" text="0365556145">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <Label layoutX="26.0" layoutY="21.0" text="Email" textFill="#616161">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
                                  </children>
                               </Pane>
                            </left>
                            <right>
                               <Pane prefHeight="200.0" prefWidth="250.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Label layoutX="14.0" layoutY="14.0" text="Who can see this?" textFill="#686868" />
+                                    <Label layoutX="14.0" layoutY="14.0" text="Who can see this?" textFill="#686868">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
                                     <Label layoutX="14.0" layoutY="65.0" text="Every one" textFill="#8d8d8d">
                                        <font>
                                           <Font size="14.0" />
