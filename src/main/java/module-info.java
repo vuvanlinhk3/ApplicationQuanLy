@@ -13,6 +13,8 @@ module com.example.demo {
     opens  UserProfiles to javafx.fxml;
     opens Login to javafx.fxml;
     opens Signup to javafx.fxml;
+    opens Home to javafx.fxml;
+
     exports SetUpTable;
     exports UserProfiles;
     exports SettingUser;
@@ -21,4 +23,5 @@ module com.example.demo {
     exports  RoomConfig;
     exports Login;
     exports Signup;
+    exports Home;
 }
