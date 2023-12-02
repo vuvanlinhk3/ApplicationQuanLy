@@ -2,98 +2,58 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <center>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <center>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-               <children>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0">
-                     <center>
-                        <Label text="ĐĂNG NHẬP" BorderPane.alignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                     </center>
-                  </BorderPane>
-                  <BorderPane prefHeight="121.0" prefWidth="600.0">
-                     <center>
-                        <Label text="Nhập Email" BorderPane.alignment="CENTER" />
-                     </center>
-                  </BorderPane>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0">
-                     <left>
-                        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-                     </left>
-                     <right>
-                        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-                     </right>
-                     <center>
-                        <TextField BorderPane.alignment="CENTER" />
-                     </center>
-                  </BorderPane>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0">
-                     <center>
-                        <Label text="Nhập Mật Khẩu" BorderPane.alignment="CENTER" />
-                     </center>
-                  </BorderPane>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0">
-                     <center>
-                        <TextField BorderPane.alignment="CENTER" />
-                     </center>
-                     <left>
-                        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-                     </left>
-                     <right>
-                        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-                     </right>
-                  </BorderPane>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0">
-                     <center>
-                        <Button mnemonicParsing="false" text="Đăng nhập" BorderPane.alignment="CENTER" />
-                     </center>
-                  </BorderPane>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0">
-                     <center>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                           <left>
-                              <Pane prefHeight="64.0" prefWidth="75.0" BorderPane.alignment="CENTER" />
-                           </left>
-                           <right>
-                              <Pane prefHeight="64.0" prefWidth="76.0" BorderPane.alignment="CENTER" />
-                           </right>
-                           <center>
-                              <SplitPane dividerPositions="0.5100671140939598" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                                <items>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="62.0" prefWidth="132.0">
-                                       <children>
-                                          <Label layoutX="66.0" layoutY="22.0" text="Bạn chưa có tài khoản? " AnchorPane.rightAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                                       <children>
-                                          <Button layoutY="16.0" mnemonicParsing="false" text="Đăng kí" />
-                                       </children>
-                                    </AnchorPane>
-                                </items>
-                              </SplitPane>
-                           </center>
-                        </BorderPane>
-                     </center>
-                  </BorderPane>
-               </children>
-            </VBox>
-         </center>
-      </BorderPane>
-   </center>
-</BorderPane>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1199.0" prefWidth="2015.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="1199.0" fitWidth="2029.0" layoutX="-2.0">
+         <image>
+            <Image url="@Capture.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="777.0" layoutY="232.0" prefHeight="520.0" prefWidth="461.0" style="-fx-background-color: #212121;">
+         <children>
+            <Label layoutX="142.0" layoutY="45.0" text="Login" textFill="#f5f5f5">
+               <font>
+                  <Font name="Tahoma Bold" size="64.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="176.0" layoutY="142.0" prefHeight="8.0" prefWidth="109.0" style="-fx-background-color: #76ff03;" />
+            <TextField layoutX="137.0" layoutY="192.0" prefHeight="34.0" prefWidth="245.0" promptText="EMAIL">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="137.0" layoutY="260.0" prefHeight="34.0" prefWidth="245.0" promptText="PASSWORD">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font>
+            </TextField>
+            <Button layoutX="53.0" layoutY="339.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="345.0" style="-fx-background-color: #76ff03; -fx-background-radius: 90;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="174.0" layoutY="423.0" mnemonicParsing="false" style="-fx-background-color: #212121;" text="Or Get Register" textFill="WHITE">
+               <font>
+                  <Font name="Arial Italic" size="13.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="64.0" fitWidth="51.0" layoutX="67.0" layoutY="177.0">
+               <image>
+                  <Image url="@img.icons8.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="51.0" layoutX="67.0" layoutY="253.0">
+               <image>
+                  <Image url="@13014132.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
