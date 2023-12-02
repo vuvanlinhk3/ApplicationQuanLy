@@ -1,0 +1,7 @@
+.backg{
+    -fx-background-image: url("Capture.jpg");
+    -fx-background-repeat: no-repeat;
+
+    -fx-background-size: cover;
+
+}

@@ -6,16 +6,12 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1199.0" prefWidth="2015.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <ImageView fitHeight="1199.0" fitWidth="2029.0" layoutX="-2.0">
-         <image>
-            <Image url="@Capture.jpg" />
-         </image>
-      </ImageView>
-      <AnchorPane layoutX="777.0" layoutY="232.0" prefHeight="520.0" prefWidth="461.0" style="-fx-background-color: #212121;">
+<BorderPane fx:id="background" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1300.0" styleClass="backg" stylesheets="@Logincss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="461.0" style="-fx-background-color: #212121; -fx-background-radius: 20;" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="142.0" layoutY="45.0" text="Login" textFill="#f5f5f5">
                <font>
@@ -33,12 +29,12 @@
                   <Font name="Arial Bold Italic" size="14.0" />
                </font>
             </TextField>
-            <Button layoutX="53.0" layoutY="339.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="345.0" style="-fx-background-color: #76ff03; -fx-background-radius: 90;" text="Login" textFill="WHITE">
+            <Button layoutX="53.0" layoutY="339.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="353.0" style="-fx-background-color: #76ff03; -fx-background-radius: 90;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Tahoma Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutX="174.0" layoutY="423.0" mnemonicParsing="false" style="-fx-background-color: #212121;" text="Or Get Register" textFill="WHITE">
+            <Button layoutX="295.0" layoutY="422.0" mnemonicParsing="false" style="-fx-background-color: #212121;" text="Get Register" textFill="WHITE">
                <font>
                   <Font name="Arial Italic" size="13.0" />
                </font>
@@ -53,7 +49,12 @@
                   <Image url="@13014132.png" />
                </image>
             </ImageView>
+            <Button layoutX="72.0" layoutY="422.0" mnemonicParsing="false" style="-fx-background-color: #212121;" text="Forget password?" textFill="WHITE">
+               <font>
+                  <Font name="Arial Italic" size="13.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
-   </children>
-</AnchorPane>
+   </center>
+</BorderPane>

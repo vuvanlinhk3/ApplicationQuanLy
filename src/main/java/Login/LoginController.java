@@ -1,16 +1,15 @@
 package Login;
 
 import javafx.application.Application;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import javafx.fxml.FXML;
 
-public class LoginController extends Application {
+public class LoginController {
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+    @FXML
+    private BorderPane background;
 
-    @Override
-    public void start(Stage primaryStage) {
 
-    }
 }
