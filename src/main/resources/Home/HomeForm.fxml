@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <BorderPane prefHeight="200.0" prefWidth="325.0" BorderPane.alignment="CENTER">
+         <top>
+            <Pane prefHeight="100.0" prefWidth="325.0" style="-fx-background-color: #2c387e;" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3f51b5;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <BorderPane prefHeight="50.0" prefWidth="975.0" style="-fx-background-color: #3f51b5;" BorderPane.alignment="CENTER">
+               <left>
+                  <Label prefHeight="50.0" prefWidth="168.0" text="    TEN DE TAI" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </left>
+               <right>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #6d1b7b;" BorderPane.alignment="CENTER_RIGHT">
+                     <children>
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                     </children>
+                  </HBox>
+               </right>
+            </BorderPane>
+         </top>
+         <center>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-image: nen.png;" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane prefHeight="200.0" prefWidth="325.0" style="-fx-background-color: #9c27b0;">
+                     <content>
+                        <VBox prefHeight="1000.0" prefWidth="325.0" spacing="20.0" style="-fx-background-color: #357a38;">
+                           <children>
+                              <Pane opacity="0.0" prefHeight="51.0" prefWidth="325.0" />
+                              <ComboBox prefHeight="25.0" prefWidth="310.0" />
+                              <ComboBox layoutX="10.0" layoutY="77.0" prefHeight="25.0" prefWidth="310.0" />
+                              <ComboBox layoutX="10.0" layoutY="77.0" prefHeight="25.0" prefWidth="310.0" />
+                              <ComboBox layoutX="10.0" layoutY="77.0" prefHeight="25.0" prefWidth="310.0" />
+                              <ComboBox layoutX="10.0" layoutY="77.0" prefHeight="25.0" prefWidth="310.0" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane prefHeight="200.0" prefWidth="325.0" style="-fx-background-color: #af52bf;" />
+                  <ScrollPane prefHeight="200.0" prefWidth="325.0" style="-fx-background-color: #dd33fa;" />
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
